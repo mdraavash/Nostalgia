@@ -145,6 +145,9 @@ class Level:
 		self.game_paused = not self.game_paused 
 
 	def run(self):
+		if self.player.health <= 0:
+			return 'game_over'
+
 		self.visible_sprites.custom_draw(self.player)
 		self.ui.display(self.player)
 		
@@ -154,6 +157,9 @@ class Level:
 			self.visible_sprites.update()
 			self.visible_sprites.enemy_update(self.player)
 			self.player_attack_logic()
+
+	def get_player_exp(self):
+		return self.player.exp
 		
 
 class YSortCameraGroup(pygame.sprite.Group):

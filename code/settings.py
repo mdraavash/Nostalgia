@@ -63,3 +63,7 @@ EXIT_BUTTON_IMAGE = 'graphics/ui/exit_button.png'
 # Help screen
 HELP_SCREEN_BG = 'graphics/ui/help_screen.png'
 BACK_BUTTON_IMAGE = 'graphics/ui/back_button.png'
+
+# restart screen
+GAME_OVER_BG = 'graphics/ui/game_over_screen.png'	
+RESTART_BUTTON_IMAGE = 'graphics/ui/restart_button.png'

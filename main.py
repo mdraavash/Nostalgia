@@ -2,6 +2,7 @@ import pygame, sys
 from code.settings import *
 from code.level import Level
 from code.home_screen import HomeScreen
+from code.gameover import GameOverScreen
 
 class Game:
 	def __init__(self):
@@ -21,6 +22,7 @@ class Game:
 	
 	def run(self):
 		on_home_screen = True
+		on_game_over_screen = False
 		while True:
 			for event in pygame.event.get():
 				if event.type == pygame.QUIT:
@@ -40,8 +42,21 @@ class Game:
 				elif result == 'exit':
 					pygame.quit()
 					sys.exit()
+			
+			elif on_game_over_screen:
+				score = self.level.get_player_exp()
+				game_over_screen = GameOverScreen(self.screen,score)
+				result = game_over_screen.run()
+				if result == 'restart':
+					self.level = Level()
+					on_game_over_screen = False
+				elif result == 'exit':
+					pygame.quit()
+					sys.exit()
 			else:
-				self.level.run()
+				result = self.level.run()
+				if result == 'game_over':
+					on_game_over_screen = True
 
 			pygame.display.update()
 			self.clock.tick(FPS)
