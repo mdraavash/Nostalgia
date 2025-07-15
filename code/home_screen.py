@@ -15,7 +15,6 @@ class HomeScreen:
     def run(self):
         self.screen.blit(self.background, (0, 0))
         if self.start_button.draw(self.screen):
-            print("Game started")
             return 'game_start'
         if self.help_button.draw(self.screen):
             help_screen = HelpScreen(self.screen)
