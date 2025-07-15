@@ -8,8 +8,8 @@ class GameOverScreen:
         self.score = score
         self.font = pygame.font.Font(UI_FONT, 30)
         self.background = pygame.image.load(GAME_OVER_BG).convert()
-        self.restart_button = Button(100, 200, pygame.image.load(RESTART_BUTTON_IMAGE).convert_alpha(), 0.5)
-        self.exit_button = Button(100, 300, pygame.image.load(EXIT_BUTTON_IMAGE).convert_alpha(), 0.5)
+        self.restart_button = Button(400, 400, pygame.image.load(RESTART_BUTTON_IMAGE).convert_alpha(), 0.75)
+        self.exit_button = Button(750, 400, pygame.image.load(EXIT_BUTTON_IMAGE).convert_alpha(), 0.75)
 
     def run(self):
         self.screen.blit(self.background, (0, 0))

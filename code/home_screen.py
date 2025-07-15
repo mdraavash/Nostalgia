@@ -8,9 +8,9 @@ class HomeScreen:
     def __init__(self,screen):
         self.screen = screen
         self.background = pygame.image.load(START_SCREEN_BG).convert()
-        self.start_button = Button(100, 200, pygame.image.load(START_BUTTON_image).convert_alpha(), 0.5)
-        self.help_button = Button(100, 300, pygame.image.load(HELP_BUTTON_IMAGE).convert_alpha(), 0.5)
-        self.exit_button = Button(100, 400, pygame.image.load(EXIT_BUTTON_IMAGE).convert_alpha(), 0.5)
+        self.start_button = Button(100, 200, pygame.image.load(START_BUTTON_image).convert_alpha(), 0.75)
+        self.help_button = Button(100, 300, pygame.image.load(HELP_BUTTON_IMAGE).convert_alpha(), 0.75)
+        self.exit_button = Button(100, 400, pygame.image.load(EXIT_BUTTON_IMAGE).convert_alpha(), 0.75)
 
     def run(self):
         self.screen.blit(self.background, (0, 0))
