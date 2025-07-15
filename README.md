@@ -1,5 +1,4 @@
-﻿# ZeldaStyleGame
-This is a zelda style game built using pygame
+﻿# Nostalgia
+Live the nostalgic years of your life playing this zelda inspired 2d game made using pygame 
 
-To start the game, run the main.py file;
-using command py main.py
+To start the game, run the main.py file
